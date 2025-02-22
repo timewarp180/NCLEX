@@ -1,0 +1,233 @@
+const questions = [
+    {
+        "id": 1,
+        "question": "A client with heart failure is receiving furosemide. Which electrolyte imbalance should the nurse monitor for?",
+        "category": "Pharmacology",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Hyperkalemia", "correct": false},
+            {"text": "Hypokalemia", "correct": true},
+            {"text": "Hypercalcemia", "correct": false},
+            {"text": "Hypocalcemia", "correct": false}
+        ],
+        "explanation": "Furosemide is a loop diuretic that can cause hypokalemia due to increased potassium excretion."
+    },
+    {
+        "id": 2,
+        "question": "The nurse is caring for a client with a chest tube. The water in the water-seal chamber is intermittently bubbling. What action should the nurse take?",
+        "category": "Med-Surg",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Clamp the chest tube", "correct": false},
+            {"text": "Notify the physician immediately", "correct": false},
+            {"text": "Check for an air leak", "correct": true},
+            {"text": "Increase the suction pressure", "correct": false}
+        ],
+        "explanation": "Intermittent bubbling in the water-seal chamber is normal and indicates air is being removed from the pleural space."
+    },
+    {
+        "id": 3,
+        "question": "Which client should the nurse assess first?",
+        "category": "Prioritization",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Client with COPD requesting pain medication", "correct": false},
+            {"text": "Client with diabetes needing insulin administration", "correct": false},
+            {"text": "Client post-op with oxygen saturation of 88%", "correct": true},
+            {"text": "Client with dementia refusing breakfast", "correct": false}
+        ],
+        "explanation": "Oxygen saturation below 90% requires immediate intervention as it indicates respiratory distress."
+    },
+    {
+        "id": 4,
+        "question": "A client is prescribed warfarin. Which dietary instruction is most important?",
+        "category": "Pharmacology",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Limit caffeine intake", "correct": false},
+            {"text": "Maintain consistent vitamin K intake", "correct": true},
+            {"text": "Increase protein consumption", "correct": false},
+            {"text": "Avoid grapefruit juice", "correct": false}
+        ],
+        "explanation": "Vitamin K counteracts warfarin's anticoagulant effect, so consistent intake is crucial."
+    },
+    {
+        "id": 5,
+        "question": "Which finding in a diabetic client requires immediate intervention?",
+        "category": "Med-Surg",
+        "type": "multiple-choice",
+        "difficulty": "easy",
+        "answers": [
+            {"text": "Blood glucose 150 mg/dL", "correct": false},
+            {"text": "Dry, itchy skin", "correct": false},
+            {"text": "Ketones in urine", "correct": true},
+            {"text": "Mild thirst", "correct": false}
+        ],
+        "explanation": "Ketones in urine indicate possible diabetic ketoacidosis, a medical emergency."
+    },
+    {
+        "id": 6,
+        "question": "A client with Parkinson's disease is experiencing bradykinesia. Which intervention is most appropriate?",
+        "category": "Neurology",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Provide a walker for ambulation", "correct": true},
+            {"text": "Encourage rapid position changes", "correct": false},
+            {"text": "Limit fluid intake", "correct": false},
+            {"text": "Administer stimulant medications", "correct": false}
+        ],
+        "explanation": "Bradykinesia (slowed movement) requires assistive devices for safe ambulation."
+    },
+    {
+        "id": 7,
+        "question": "Which statement by a client with tuberculosis indicates understanding of treatment?",
+        "category": "Infectious Disease",
+        "type": "multiple-choice",
+        "difficulty": "easy",
+        "answers": [
+            {"text": "I'll stop medications when symptoms disappear", "correct": false},
+            {"text": "I need to take medications for 6-12 months", "correct": true},
+            {"text": "I don't need respiratory isolation", "correct": false},
+            {"text": "I can share utensils with family", "correct": false}
+        ],
+        "explanation": "TB treatment requires prolonged medication therapy to ensure complete eradication."
+    },
+    {
+        "id": 8,
+        "question": "A client is experiencing anaphylaxis. Which action should the nurse take first?",
+        "category": "Emergency",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Administer epinephrine", "correct": true},
+            {"text": "Elevate the legs", "correct": false},
+            {"text": "Start oxygen therapy", "correct": false},
+            {"text": "Obtain vital signs", "correct": false}
+        ],
+        "explanation": "Epinephrine is the first-line treatment for anaphylaxis to reverse bronchospasm and hypotension."
+    },
+    {
+        "id": 9,
+        "question": "Which client is at highest risk for developing pressure ulcers?",
+        "category": "Fundamentals",
+        "type": "multiple-choice",
+        "difficulty": "easy",
+        "answers": [
+            {"text": "A 25-year-old with a fractured arm", "correct": false},
+            {"text": "A 50-year-old postoperative client", "correct": false},
+            {"text": "A 70-year-old incontinent client with limited mobility", "correct": true},
+            {"text": "A 40-year-old with pneumonia", "correct": false}
+        ],
+        "explanation": "Elderly clients with immobility and incontinence have the highest risk for pressure ulcers."
+    },
+    {
+        "id": 10,
+        "question": "The nurse is preparing to administer digoxin. Which finding requires holding the dose?",
+        "category": "Pharmacology",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Blood pressure 130/80 mmHg", "correct": false},
+            {"text": "Heart rate 58 bpm", "correct": true},
+            {"text": "Respiratory rate 16/min", "correct": false},
+            {"text": "Temperature 98.6°F", "correct": false}
+        ],
+        "explanation": "Digoxin should be withheld if apical pulse is below 60 bpm due to risk of toxicity."
+    },
+    {
+        "id": 11,
+        "question": "The normal potassium level in blood is ______ mEq/L.",
+        "category": "Fundamentals",
+        "type": "fill-blank",
+        "difficulty": "easy",
+        "answers": [
+            {"text": "3.5-5.0", "correct": true}
+        ],
+        "explanation": "Normal serum potassium levels range from 3.5 to 5.0 mEq/L."
+    },
+    {
+        "id": 12,
+        "question": "Which are signs of hypokalemia? (Select all that apply)",
+        "category": "Med-Surg",
+        "type": "select-all",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Muscle weakness", "correct": true},
+            {"text": "Bradycardia", "correct": false},
+            {"text": "Constipation", "correct": true},
+            {"text": "Hyperactive reflexes", "correct": false}
+        ],
+        "explanation": "Hypokalemia symptoms include muscle weakness and constipation."
+    },
+    {
+        "id": 13,
+        "question": "Order the steps for administering insulin:",
+        "category": "Skills",
+        "type": "priority",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Check blood glucose", "correctPosition": 1},
+            {"text": "Prepare insulin syringe", "correctPosition": 2},
+            {"text": "Clean injection site", "correctPosition": 3}
+        ],
+        "explanation": "Proper insulin administration sequence ensures patient safety."
+    },
+    {
+        "id": 14,
+        "question": "Match medications with their antidotes:",
+        "category": "Pharmacology",
+        "type": "medication-matching",
+        "difficulty": "hard",
+        "pairs": [
+            {"medication": "Warfarin", "antidote": "Vitamin K"},
+            {"medication": "Heparin", "antidote": "Protamine Sulfate"},
+            {"medication": "Opioids", "antidote": "Naloxone"}
+        ],
+        "explanation": "Proper antidote knowledge is crucial for overdose management."
+    },
+    {
+        "id": 15,
+        "question": "The normal pH range for arterial blood is ______.",
+        "category": "ABG Interpretation",
+        "type": "fill-blank",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "7.35-7.45", "correct": true},
+            {"text": "7.35 to 7.45", "correct": true},
+            {"text": "7.35 - 7.45", "correct": true}
+        ],
+        "explanation": "Normal arterial blood pH is tightly regulated between 7.35 and 7.45."
+    },
+    {
+        "id": 16,
+        "question": "When assessing a patient with {1}, the nurse should prioritize {2} and monitor for {3}. The first action should be to {4}.",
+        "category": "Clinical Scenarios",
+        "type": "scenario-dropdown",
+        "difficulty": "hard",
+        "dropdowns": {
+            "1": {
+                "options": ["diabetes", "hypertension", "COPD"],
+                "correct": "diabetes"
+            },
+            "2": {
+                "options": ["polyuria", "dyspnea", "tachycardia"],
+                "correct": "polyuria"
+            },
+            "3": {
+                "options": ["hyperglycemia", "hypoglycemia", "euglycemia"],
+                "correct": "hypoglycemia"
+            },
+            "4": {
+                "options": ["administer insulin", "check blood glucose", "call physician"],
+                "correct": "check blood glucose"
+            }
+        },
+        "explanation": "Diabetes management requires monitoring for both hyperglycemia and hypoglycemia. Blood glucose check should always precede insulin administration."
+    }
+
+];

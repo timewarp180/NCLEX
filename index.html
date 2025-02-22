@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCLEX Practice Questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add these in <head> -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.2.0/math.min.js"></script>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">NCLEX Practice</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">               
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="new-quiz-btn">New Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="review-weak-btn">Review Weak Areas</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" id="timer">00:00</span>
+                    </li>
+                </ul>
+                <form class="d-flex" id="search-form">
+                    <input class="form-control me-2" type="search" placeholder="Search questions">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <div class="card-header">Quiz Settings</div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label">Mode:</label>
+                            <select class="form-select" id="quiz-mode">
+                                <option value="timed">Timed</option>
+                                <option value="untimed">Untimed</option>
+                                <option value="study">Study</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Difficulty:</label>
+                            <select class="form-select" id="quiz-difficulty">
+                                <option value="all">All Levels</option>
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary w-100" id="start-quiz-btn">Start Quiz</button>
+                    </div>
+                </div>
+                
+                    <div id="analytics" class="mb-4"></div>
+                    <!-- Existing progress card -->
+                
+                <div class="card">
+                    <div class="card-header">Progress</div>
+                    <div class="card-body">
+                        <div class="progress mb-3">
+                            <div class="progress-bar" id="progress-bar" role="progressbar"></div>
+                        </div>
+                        <div id="progress-stats"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header" id="question-header"></div>
+                    <div class="card-body">
+                        <div id="question-container" class="d-none">
+                            <div id="question-status" class="mb-3"></div>
+                            <div id="question-text"></div>
+                            <div id="question-media" class="my-3"></div>
+                            <div id="answer-buttons" class="d-grid gap-2"></div>
+                        </div>
+                        <div id="category-selection">
+                            <h4>Select Categories</h4>
+                            <div id="category-buttons" class="d-flex flex-wrap gap-2 mb-3"></div>
+                        </div>
+                        <div id="results" class="d-none">
+                            <h3>Quiz Results</h3>
+                            <div id="results-content"></div>
+                            <button class="btn btn-primary" id="review-incorrect-btn">Review Incorrect Answers</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-secondary" id="prev-btn">Previous</button>
+                            <button class="btn btn-primary" id="next-btn">Next</button>
+                            <button class="btn btn-success d-none" id="submit-btn">Submit Quiz</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="results" class="d-none">
+                    <h3>Quiz Results</h3>
+                    <div id="results-content"></div>
+                    <button class="btn btn-primary" id="review-incorrect-btn">Review Incorrect Answers</button>
+                </div>
+
+                <div id="flashcard-container" class="my-4"></div>
+                <button class="btn btn-primary" onclick="flashcardSystem.showNextCard()">Start Flashcards</button>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card performance-card">
+                  <div class="card-header">Performance Analytics</div>
+                  <div class="card-body">
+                    <div class="chart-container">
+                      <canvas id="performanceChart"></canvas>
+                    </div>
+                    <div class="mt-3">
+                      <h6>Category Performance</h6>
+                      <div id="category-performance"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
+    </div>
+    <!-- Add this in the <head> section -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="questions.json"></script>
+    <script src="analytics.js"></script>
+            <!-- Add before closing </body> -->
+    <script src="drug-calculator.js"></script>
+    <script src="flashcards.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
