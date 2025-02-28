@@ -2,7 +2,7 @@ const questions = [
     {
         "id": 1,
         "question": "A client with heart failure is receiving furosemide. Which electrolyte imbalance should the nurse monitor for?",
-        "category": "Pharmacology", // Ensure this property exists
+        "category": "Pharmacology",
         "type": "multiple-choice",
         "difficulty": "medium",
         "answers": [
@@ -472,8 +472,6 @@ const questions = [
         ],
         "explanation": "Vancomycin infusion too quickly causes red man syndrome (flushing, rash)."
     },
-
-    // Pediatrics
     {
         "id": 34,
         "question": "A 2-month-old with a fever of 101.3°F (38.5°C) is brought to the ER. What action is priority?",
@@ -488,8 +486,6 @@ const questions = [
         ],
         "explanation": "Infants <3 months with fever require immediate sepsis workup (lumbar puncture)."
     },
-
-    // Mental Health
     {
         "id": 35,
         "question": "A client with borderline personality disorder threatens self-harm. Which response is therapeutic?",
@@ -504,8 +500,6 @@ const questions = [
         ],
         "explanation": "Validate feelings and focus on problem-solving to de-escalate."
     },
-
-    // OB/GYN
     {
         "id": 36,
         "question": "A client at 32 weeks gestation reports blurred vision and headache. Which action is priority?",
@@ -520,8 +514,6 @@ const questions = [
         ],
         "explanation": "Blurred vision + headache suggest preeclampsia; BP check is critical."
     },
-
-    // Select-All Questions
     {
         "id": 37,
         "question": "Which are signs of meningitis in an adult? (Select all that apply)",
@@ -536,8 +528,6 @@ const questions = [
         ],
         "explanation": "Meningitis triad: fever, headache, nuchal rigidity. Kernig's and Brudzinski's signs are classic."
     },
-
-    // Fill-in-the-Blank
     {
         "id": 38,
         "question": "The normal adult hemoglobin range for males is ______ g/dL.",
@@ -549,8 +539,6 @@ const questions = [
         ],
         "explanation": "Normal male Hb: 13.5–17.5 g/dL; female: 12–15.5 g/dL."
     },
-
-    // Priority (Ordering)
     {
         "id": 39,
         "question": "Order the steps for responding to a fire:",
@@ -565,8 +553,6 @@ const questions = [
         ],
         "explanation": "RACE protocol: Rescue, Alarm, Contain, Extinguish/Evacuate."
     },
-
-    // Scenario-Based Dropdown
     {
         "id": 40,
         "question": "When assessing a client with {1}, the nurse should prioritize {2} and monitor for {3}. The first action is to {4}.",
@@ -593,7 +579,6 @@ const questions = [
         },
         "explanation": "Pancreatitis presents with epigastric pain, elevated lipase, and Cullen's/Grey Turner's signs."
     },
-    // Pharmacology
     {
         "id": 41,
         "question": "A client taking spironolactone should avoid excessive consumption of which food?",
@@ -622,8 +607,6 @@ const questions = [
         ],
         "explanation": "Protamine sulfate neutralizes heparin. Vitamin K reverses warfarin."
     },
-
-    // Med-Surg
     {
         "id": 43,
         "question": "A client with Crohn’s disease reports perianal pain. Which finding should the nurse anticipate?",
@@ -652,8 +635,6 @@ const questions = [
         ],
         "explanation": "Hypocalcemia causes neuromuscular excitability (Trousseau’s, spasms, hyperreflexia)."
     },
-
-    // Fundamentals
     {
         "id": 45,
         "question": "The normal fasting blood glucose level is ______ mg/dL.",
@@ -665,8 +646,6 @@ const questions = [
         ],
         "explanation": "Normal fasting blood glucose is 70–100 mg/dL."
     },
-
-    // Prioritization
     {
         "id": 46,
         "question": "Which client should the nurse assess first?",
@@ -681,8 +660,6 @@ const questions = [
         ],
         "explanation": "SpO₂ <90% indicates hypoxia and requires immediate intervention."
     },
-
-    // Emergency
     {
         "id": 47,
         "question": "A client with a snakebite develops swelling and numbness. Which action is priority?",
@@ -697,8 +674,6 @@ const questions = [
         ],
         "explanation": "Immobilize the limb to slow venom spread. Tourniquets/ice worsen tissue damage."
     },
-
-    // Skills
     {
         "id": 48,
         "question": "Order the steps for hand hygiene:",
@@ -713,8 +688,6 @@ const questions = [
         ],
         "explanation": "Proper handwashing reduces infection risk (WHO guidelines)."
     },
-
-    // Scenario-Dropdown (Clinical Judgment)
     {
         "id": 49,
         "question": "When assessing a client with {1}, the nurse should prioritize {2} and monitor for {3}. The first action is to {4}.",
@@ -741,8 +714,6 @@ const questions = [
         },
         "explanation": "DKA management starts with fluid resuscitation to correct dehydration and acidosis."
     },
-
-    // Infectious Disease
     {
         "id": 50,
         "question": "A client with tuberculosis is prescribed rifampin. Which side effect should the nurse warn about?",
@@ -782,5 +753,4 @@ const questions = [
         ],
         "explanation": "Normal platelets: 150,000–400,000/mm³."
     }
-
 ];
