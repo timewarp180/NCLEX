@@ -6,9 +6,12 @@
     <title>NCLEX Practice Questions</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Add these in <head> -->
-<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.2.0/math.min.js"></script>
+
+    <!-- Load Chart.js and other libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.2.0/math.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -64,8 +67,7 @@
                     </div>
                 </div>
                 
-                    <div id="analytics" class="mb-4"></div>
-                    <!-- Existing progress card -->
+                <div id="analytics" class="mb-4"></div>
                 
                 <div class="card">
                     <div class="card-header">Progress</div>
@@ -106,46 +108,138 @@
                         </div>
                     </div>
                 </div>
-                
-                <div id="results" class="d-none">
-                    <h3>Quiz Results</h3>
-                    <div id="results-content"></div>
-                    <button class="btn btn-primary" id="review-incorrect-btn">Review Incorrect Answers</button>
-                </div>
 
                 <div id="flashcard-container" class="my-4"></div>
                 <button class="btn btn-primary" onclick="flashcardSystem.showNextCard()">Start Flashcards</button>
             </div>
-
-            <div class="col-md-3">
-                <div class="card performance-card">
-                  <div class="card-header">Performance Analytics</div>
-                  <div class="card-body">
-                    <div class="chart-container">
-                      <canvas id="performanceChart"></canvas>
+            
+            <!-- Performance Dashboard -->
+            <div class="performance-dashboard">
+                <div class="dashboard-header">
+                    <h4 class="mb-0">Current Performance Analytics</h4>
+                    <div class="timer-display bg-primary text-white">
+                        <span>⏱️ Total Time: </span>
+                        <span id="analytics-timer">00:00</span>
                     </div>
-                    <div class="mt-3">
-                      <h6>Category Performance</h6>
-                      <div id="category-performance"></div>
-                    </div>
-                  </div>
                 </div>
-              </div>
+            
+                <div class="metrics-grid">
+                    <div class="metric-card overall-score">
+                        <div class="metric-content">
+                            <div class="metric-icon">📊</div>
+                            <div class="metric-data">
+                                <div class="metric-value" id="score-display">0/0</div>
+                                <div class="metric-label">Overall Score</div>
+                            </div>
+                            <div class="metric-progress">
+                                <div class="progress-circle" id="percentage-circle">
+                                    <span>0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="metric-card time-metrics">
+                        <div class="metric-content">
+                            <div class="metric-icon">⏳</div>
+                            <div class="metric-data">
+                                <div class="metric-value" id="avg-time">0s</div>
+                                <div class="metric-label">Avg/Question</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="analytics-grid">
+                    <div class="chart-card">
+                        <h5>Category Mastery</h5>
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+            
+                    <div class="chart-card">
+                        <h5>Question Type Analysis</h5>
+                        <canvas id="typeChart"></canvas>
+                    </div>
+            
+                    <div class="chart-card">
+                        <h5>Difficulty Breakdown</h5>
+                        <canvas id="difficultyChart"></canvas>
+                    </div>
+                </div>
+            
+                <div class="timeline-card">
+                    <h5>Progress Timeline</h5>
+                    <div class="timeline-progress">
+                        <div class="timeline-bar"></div>
+                        <div class="timeline-marker" style="left: 0%"></div>
+                    </div>
+                    <div class="timeline-labels">
+                        <span>Start</span>
+                        <span>Current</span>
+                        <span>End</span>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Overall Performance Analytics -->
+            <div class="card performance-card">
+                <div class="card-header">Overall Performance Analytics</div>
+                <div class="card-body">
+                    <!-- Chart Container -->
+                    <div class="chart-container">
+                        <canvas id="overallPerformanceChart"></canvas>
+                        <!-- The "No data available" message will be dynamically added here -->
+                    </div>
+
+                    <!-- Filters -->
+                    <div class="mt-3">
+                        <h6>Filter by Category</h6>
+                        <select class="form-select" id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="Pharmacology">Pharmacology</option>
+                            <option value="Med-Surg">Med-Surg</option>
+                            <option value="Prioritization">Prioritization</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Infectious Disease">Infectious Disease</option>
+                            <option value="Emergency">Emergency</option>
+                            <option value="Fundamentals">Fundamentals</option>
+                            <option value="Skills">Skills</option>
+                            <option value="ABG Interpretation">ABG Interpretation</option>
+                            <option value="Clinical Scenarios">Clinical Scenarios</option>
+                            <option value="OB/GYN">OB/GYN</option>
+                            <option value="Nutrition">Nutrition</option>
+                            <option value="Pediatrics">Pediatrics</option>
+                            <option value="Mental Health">Mental Health</option>
+                            <option value="Safety">Safety</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
-    <!-- Add this in the <head> section -->
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Pre-Submission Modal -->
+<div class="modal fade" id="preSubmissionModal" tabindex="-1" aria-labelledby="preSubmissionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="preSubmissionModalLabel">Quiz Submission</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="preSubmissionModalBody">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="confirmSubmitButton">Submit Quiz</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Load custom scripts -->
     <script src="questions.json"></script>
     <script src="analytics.js"></script>
-            <!-- Add before closing </body> -->
     <script src="drug-calculator.js"></script>
     <script src="flashcards.js"></script>
-
     <script src="app.js"></script>
-
 </body>
 </html>

@@ -2,7 +2,7 @@ const questions = [
     {
         "id": 1,
         "question": "A client with heart failure is receiving furosemide. Which electrolyte imbalance should the nurse monitor for?",
-        "category": "Pharmacology",
+        "category": "Pharmacology", // Ensure this property exists
         "type": "multiple-choice",
         "difficulty": "medium",
         "answers": [
@@ -228,6 +228,559 @@ const questions = [
             }
         },
         "explanation": "Diabetes management requires monitoring for both hyperglycemia and hypoglycemia. Blood glucose check should always precede insulin administration."
+    },
+    {
+        "id": 17,
+        "question": "A client taking metformin reports muscle pain and fatigue. Which lab value is most critical to assess?",
+        "category": "Pharmacology",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Blood glucose", "correct": false},
+            {"text": "Serum creatinine", "correct": false},
+            {"text": "Lactic acid", "correct": true},
+            {"text": "Liver enzymes", "correct": false}
+        ],
+        "explanation": "Metformin increases risk of lactic acidosis, especially in renal impairment."
+    },
+    {
+        "id": 18,
+        "question": "Which are signs of hypomagnesemia? (Select all that apply)",
+        "category": "Med-Surg",
+        "type": "select-all",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Tetany", "correct": true},
+            {"text": "Tachycardia", "correct": false},
+            {"text": "Positive Trousseau's sign", "correct": true},
+            {"text": "Hypertension", "correct": false}
+        ],
+        "explanation": "Hypomagnesemia causes neuromuscular excitability (tetany, Trousseau's)."
+    },
+    {
+        "id": 19,
+        "question": "Which client should the nurse assess first?",
+        "category": "Prioritization",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Post-op appendectomy with pain rated 6/10", "correct": false},
+            {"text": "Asthma exacerbation with wheezing on exertion", "correct": false},
+            {"text": "Pulmonary embolism with sudden dyspnea and chest pain", "correct": true},
+            {"text": "UTI with fever of 100.4°F", "correct": false}
+        ],
+        "explanation": "Sudden dyspnea and chest pain in PE indicate life-threatening hypoxia."
+    },
+    {
+        "id": 20,
+        "question": "The normal serum sodium level is ______ mEq/L.",
+        "category": "Fundamentals",
+        "type": "fill-blank",
+        "difficulty": "easy",
+        "answers": [
+            {"text": "135-145", "correct": true}
+        ],
+        "explanation": "Normal sodium levels range from 135–145 mEq/L."
+    },
+    {
+        "id": 21,
+        "question": "Order the steps for responding to a seizure:",
+        "category": "Emergency",
+        "type": "priority",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Turn patient to lateral position", "correctPosition": 1},
+            {"text": "Protect head from injury", "correctPosition": 2},
+            {"text": "Time the seizure duration", "correctPosition": 3},
+            {"text": "Administer lorazepam PRN", "correctPosition": 4}
+        ],
+        "explanation": "Safety and airway come first; medication is given only if seizure persists."
+    },
+    {
+        "id": 22,
+        "question": "Match the following conditions with their primary symptoms:",
+        "category": "Med-Surg",
+        "type": "medication-matching",
+        "difficulty": "medium",
+        "pairs": [
+            {"medication": "Parkinson's Disease", "antidote": "Bradykinesia"},
+            {"medication": "Multiple Sclerosis", "antidote": "Fatigue"},
+            {"medication": "Myasthenia Gravis", "antidote": "Muscle weakness worsening with activity"}
+        ],
+        "explanation": "Understanding disease-specific symptoms aids accurate assessment."
+    },
+    {
+        "id": 23,
+        "question": "A postpartum client reports heavy vaginal bleeding. Which action is priority?",
+        "category": "OB/GYN",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Massage the fundus", "correct": true},
+            {"text": "Administer oxytocin", "correct": false},
+            {"text": "Prepare for surgery", "correct": false},
+            {"text": "Check hemoglobin", "correct": false}
+        ],
+        "explanation": "Uterine atony is the most common cause; fundal massage stimulates contraction."
+    },
+    {
+        "id": 24,
+        "question": "Which statement by a client with HIV indicates effective teaching?",
+        "category": "Infectious Disease",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "I should avoid all physical contact", "correct": false},
+            {"text": "I will use a condom during sex", "correct": true},
+            {"text": "I can stop antiretrovirals when CD4 increases", "correct": false},
+            {"text": "I don’t need to disclose my status to partners", "correct": false}
+        ],
+        "explanation": "Condoms prevent transmission; ART must be continued lifelong."
+    },
+    {
+        "id": 25,
+        "question": "A client with pancreatitis should avoid which dietary component?",
+        "category": "Nutrition",
+        "type": "multiple-choice",
+        "difficulty": "easy",
+        "answers": [
+            {"text": "Carbohydrates", "correct": false},
+            {"text": "Proteins", "correct": false},
+            {"text": "Fats", "correct": true},
+            {"text": "Vitamins", "correct": false}
+        ],
+        "explanation": "Fat restriction reduces pancreatic enzyme stimulation."
+    },
+    {
+        "id": 26,
+        "question": "The nurse observes clear drainage from a client’s nose after head trauma. Which action is priority?",
+        "category": "Neurology",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Test drainage for glucose", "correct": true},
+            {"text": "Suction the nares", "correct": false},
+            {"text": "Elevate the head of bed", "correct": false},
+            {"text": "Administer antibiotics", "correct": false}
+        ],
+        "explanation": "Clear drainage could be CSF (glucose-positive); test to rule out rhinorrhea."
+    },
+    {
+        "id": 27,
+        "question": "Which are risk factors for deep vein thrombosis? (Select all that apply)",
+        "category": "Med-Surg",
+        "type": "select-all",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Prolonged immobility", "correct": true},
+            {"text": "Obesity", "correct": true},
+            {"text": "Hypertension", "correct": false},
+            {"text": "Oral contraceptive use", "correct": true}
+        ],
+        "explanation": "Virchow's triad: stasis, hypercoagulability, endothelial injury."
+    },
+    {
+        "id": 28,
+        "question": "When assessing a client with {1}, the nurse should prioritize {2} and monitor for {3}. The first action is to {4}.",
+        "category": "Clinical Scenarios",
+        "type": "scenario-dropdown",
+        "difficulty": "hard",
+        "dropdowns": {
+            "1": {
+                "options": ["heart failure", "asthma", "renal failure"],
+                "correct": "heart failure"
+            },
+            "2": {
+                "options": ["weight gain", "wheezing", "oliguria"],
+                "correct": "weight gain"
+            },
+            "3": {
+                "options": ["pulmonary edema", "bronchospasm", "hyperkalemia"],
+                "correct": "pulmonary edema"
+            },
+            "4": {
+                "options": ["administer furosemide", "auscultate lungs", "check potassium"],
+                "correct": "auscultate lungs"
+            }
+        },
+        "explanation": "Weight gain in HF suggests fluid overload; lung assessment guides intervention."
+    },
+    {
+        "id": 29,
+        "question": "The normal adult respiratory rate is ______ breaths/min.",
+        "category": "Fundamentals",
+        "type": "fill-blank",
+        "difficulty": "easy",
+        "answers": [
+            {"text": "12-20", "correct": true}
+        ],
+        "explanation": "Normal adult respiratory rate is 12–20 breaths per minute."
+    },
+    {
+        "id": 30,
+        "question": "A client with a head injury has a Glasgow Coma Scale (GCS) score of 13. How should the nurse interpret this?",
+        "category": "Neurology",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Severe brain injury", "correct": false},
+            {"text": "Moderate brain injury", "correct": true},
+            {"text": "Mild brain injury", "correct": false},
+            {"text": "No brain injury", "correct": false}
+        ],
+        "explanation": "GCS scores: 13–15 = mild, 9–12 = moderate, ≤8 = severe."
+    },
+    {
+        "id": 31,
+        "question": "Order the steps for inserting an NG tube:",
+        "category": "Skills",
+        "type": "priority",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Measure tube length", "correctPosition": 1},
+            {"text": "Lubricate the tube", "correctPosition": 2},
+            {"text": "Insert tube via nostril", "correctPosition": 3},
+            {"text": "Verify placement with X-ray", "correctPosition": 4}
+        ],
+        "explanation": "Proper NG insertion requires measurement, lubrication, and radiographic confirmation."
+    },
+    {
+        "id": 32,
+        "question": "A client taking lithium reports nausea and tremors. Which lab value is most critical to check?",
+        "category": "Pharmacology",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Serum sodium", "correct": false},
+            {"text": "Lithium level", "correct": true},
+            {"text": "Liver enzymes", "correct": false},
+            {"text": "Hemoglobin", "correct": false}
+        ],
+        "explanation": "Lithium toxicity presents with nausea, tremors, and confusion. Therapeutic range: 0.6–1.2 mEq/L."
+    },
+    {
+        "id": 33,
+        "question": "Which medication requires monitoring for 'red man syndrome'?",
+        "category": "Pharmacology",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Vancomycin", "correct": true},
+            {"text": "Penicillin", "correct": false},
+            {"text": "Metronidazole", "correct": false},
+            {"text": "Ciprofloxacin", "correct": false}
+        ],
+        "explanation": "Vancomycin infusion too quickly causes red man syndrome (flushing, rash)."
+    },
+
+    // Pediatrics
+    {
+        "id": 34,
+        "question": "A 2-month-old with a fever of 101.3°F (38.5°C) is brought to the ER. What action is priority?",
+        "category": "Pediatrics",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Administer acetaminophen", "correct": false},
+            {"text": "Perform a lumbar puncture", "correct": true},
+            {"text": "Encourage fluids", "correct": false},
+            {"text": "Obtain a throat culture", "correct": false}
+        ],
+        "explanation": "Infants <3 months with fever require immediate sepsis workup (lumbar puncture)."
+    },
+
+    // Mental Health
+    {
+        "id": 35,
+        "question": "A client with borderline personality disorder threatens self-harm. Which response is therapeutic?",
+        "category": "Mental Health",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "You’re being manipulative", "correct": false},
+            {"text": "Let’s discuss coping strategies", "correct": true},
+            {"text": "I’ll restrict your privileges", "correct": false},
+            {"text": "Why do you feel this way?", "correct": false}
+        ],
+        "explanation": "Validate feelings and focus on problem-solving to de-escalate."
+    },
+
+    // OB/GYN
+    {
+        "id": 36,
+        "question": "A client at 32 weeks gestation reports blurred vision and headache. Which action is priority?",
+        "category": "OB/GYN",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Check blood pressure", "correct": true},
+            {"text": "Assess fetal heart rate", "correct": false},
+            {"text": "Administer magnesium sulfate", "correct": false},
+            {"text": "Perform a glucose test", "correct": false}
+        ],
+        "explanation": "Blurred vision + headache suggest preeclampsia; BP check is critical."
+    },
+
+    // Select-All Questions
+    {
+        "id": 37,
+        "question": "Which are signs of meningitis in an adult? (Select all that apply)",
+        "category": "Med-Surg",
+        "type": "select-all",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Nuchal rigidity", "correct": true},
+            {"text": "Photophobia", "correct": true},
+            {"text": "Hypotension", "correct": false},
+            {"text": "Kernig's sign", "correct": true}
+        ],
+        "explanation": "Meningitis triad: fever, headache, nuchal rigidity. Kernig's and Brudzinski's signs are classic."
+    },
+
+    // Fill-in-the-Blank
+    {
+        "id": 38,
+        "question": "The normal adult hemoglobin range for males is ______ g/dL.",
+        "category": "Fundamentals",
+        "type": "fill-blank",
+        "difficulty": "easy",
+        "answers": [
+            {"text": "13.5-17.5", "correct": true}
+        ],
+        "explanation": "Normal male Hb: 13.5–17.5 g/dL; female: 12–15.5 g/dL."
+    },
+
+    // Priority (Ordering)
+    {
+        "id": 39,
+        "question": "Order the steps for responding to a fire:",
+        "category": "Safety",
+        "type": "priority",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Rescue patients from danger", "correctPosition": 1},
+            {"text": "Activate the alarm", "correctPosition": 2},
+            {"text": "Contain the fire", "correctPosition": 3},
+            {"text": "Extinguish or evacuate", "correctPosition": 4}
+        ],
+        "explanation": "RACE protocol: Rescue, Alarm, Contain, Extinguish/Evacuate."
+    },
+
+    // Scenario-Based Dropdown
+    {
+        "id": 40,
+        "question": "When assessing a client with {1}, the nurse should prioritize {2} and monitor for {3}. The first action is to {4}.",
+        "category": "Clinical Scenarios",
+        "type": "scenario-dropdown",
+        "difficulty": "hard",
+        "dropdowns": {
+            "1": {
+                "options": ["appendicitis", "cholecystitis", "pancreatitis"],
+                "correct": "pancreatitis"
+            },
+            "2": {
+                "options": ["abdominal pain", "jaundice", "flank ecchymosis"],
+                "correct": "abdominal pain"
+            },
+            "3": {
+                "options": ["Cullen's sign", "Murphy's sign", "Rebound tenderness"],
+                "correct": "Cullen's sign"
+            },
+            "4": {
+                "options": ["administer morphine", "start NPO status", "obtain lipase levels"],
+                "correct": "obtain lipase levels"
+            }
+        },
+        "explanation": "Pancreatitis presents with epigastric pain, elevated lipase, and Cullen's/Grey Turner's signs."
+    },
+    // Pharmacology
+    {
+        "id": 41,
+        "question": "A client taking spironolactone should avoid excessive consumption of which food?",
+        "category": "Pharmacology",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Bananas", "correct": true},
+            {"text": "Cheese", "correct": false},
+            {"text": "Eggs", "correct": false},
+            {"text": "Bread", "correct": false}
+        ],
+        "explanation": "Spironolactone is a potassium-sparing diuretic. Bananas are high in potassium, risking hyperkalemia."
+    },
+    {
+        "id": 42,
+        "question": "Which medication is used to reverse heparin overdose?",
+        "category": "Pharmacology",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Vitamin K", "correct": false},
+            {"text": "Protamine sulfate", "correct": true},
+            {"text": "Naloxone", "correct": false},
+            {"text": "Flumazenil", "correct": false}
+        ],
+        "explanation": "Protamine sulfate neutralizes heparin. Vitamin K reverses warfarin."
+    },
+
+    // Med-Surg
+    {
+        "id": 43,
+        "question": "A client with Crohn’s disease reports perianal pain. Which finding should the nurse anticipate?",
+        "category": "Med-Surg",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Fistula", "correct": true},
+            {"text": "Melena", "correct": false},
+            {"text": "Hematemesis", "correct": false},
+            {"text": "Jaundice", "correct": false}
+        ],
+        "explanation": "Crohn’s often causes fistulas, especially in the perianal area."
+    },
+    {
+        "id": 44,
+        "question": "Which are signs of hypocalcemia? (Select all that apply)",
+        "category": "Med-Surg",
+        "type": "select-all",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Positive Trousseau's sign", "correct": true},
+            {"text": "Muscle spasms", "correct": true},
+            {"text": "Hyperactive reflexes", "correct": true},
+            {"text": "Flaccid paralysis", "correct": false}
+        ],
+        "explanation": "Hypocalcemia causes neuromuscular excitability (Trousseau’s, spasms, hyperreflexia)."
+    },
+
+    // Fundamentals
+    {
+        "id": 45,
+        "question": "The normal fasting blood glucose level is ______ mg/dL.",
+        "category": "Fundamentals",
+        "type": "fill-blank",
+        "difficulty": "easy",
+        "answers": [
+            {"text": "70-100", "correct": true}
+        ],
+        "explanation": "Normal fasting blood glucose is 70–100 mg/dL."
+    },
+
+    // Prioritization
+    {
+        "id": 46,
+        "question": "Which client should the nurse assess first?",
+        "category": "Prioritization",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Client with a headache after lumbar puncture", "correct": false},
+            {"text": "Client with an SpO₂ of 82% on room air", "correct": true},
+            {"text": "Client requesting pain medication post-op", "correct": false},
+            {"text": "Client with a temperature of 100.8°F", "correct": false}
+        ],
+        "explanation": "SpO₂ <90% indicates hypoxia and requires immediate intervention."
+    },
+
+    // Emergency
+    {
+        "id": 47,
+        "question": "A client with a snakebite develops swelling and numbness. Which action is priority?",
+        "category": "Emergency",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Apply a tourniquet", "correct": false},
+            {"text": "Immobilize the limb", "correct": true},
+            {"text": "Ice the area", "correct": false},
+            {"text": "Suction the venom", "correct": false}
+        ],
+        "explanation": "Immobilize the limb to slow venom spread. Tourniquets/ice worsen tissue damage."
+    },
+
+    // Skills
+    {
+        "id": 48,
+        "question": "Order the steps for hand hygiene:",
+        "category": "Skills",
+        "type": "priority",
+        "difficulty": "easy",
+        "answers": [
+            {"text": "Wet hands with water", "correctPosition": 1},
+            {"text": "Apply soap", "correctPosition": 2},
+            {"text": "Scrub for 20 seconds", "correctPosition": 3},
+            {"text": "Rinse thoroughly", "correctPosition": 4}
+        ],
+        "explanation": "Proper handwashing reduces infection risk (WHO guidelines)."
+    },
+
+    // Scenario-Dropdown (Clinical Judgment)
+    {
+        "id": 49,
+        "question": "When assessing a client with {1}, the nurse should prioritize {2} and monitor for {3}. The first action is to {4}.",
+        "category": "Clinical Scenarios",
+        "type": "scenario-dropdown",
+        "difficulty": "hard",
+        "dropdowns": {
+            "1": {
+                "options": ["diabetic ketoacidosis", "hypoglycemia", "hyperglycemia"],
+                "correct": "diabetic ketoacidosis"
+            },
+            "2": {
+                "options": ["Kussmaul respirations", "tremors", "polyuria"],
+                "correct": "Kussmaul respirations"
+            },
+            "3": {
+                "options": ["metabolic acidosis", "seizures", "dehydration"],
+                "correct": "metabolic acidosis"
+            },
+            "4": {
+                "options": ["administer insulin", "give oral glucose", "start IV fluids"],
+                "correct": "start IV fluids"
+            }
+        },
+        "explanation": "DKA management starts with fluid resuscitation to correct dehydration and acidosis."
+    },
+
+    // Infectious Disease
+    {
+        "id": 50,
+        "question": "A client with tuberculosis is prescribed rifampin. Which side effect should the nurse warn about?",
+        "category": "Infectious Disease",
+        "type": "multiple-choice",
+        "difficulty": "medium",
+        "answers": [
+            {"text": "Orange-colored body fluids", "correct": true},
+            {"text": "Peripheral neuropathy", "correct": false},
+            {"text": "Tinnitus", "correct": false},
+            {"text": "Blurred vision", "correct": false}
+        ],
+        "explanation": "Rifampin turns urine, sweat, and tears orange-red."
+    },
+    {
+        "id": 51,
+        "question": "A client with cirrhosis develops confusion and asterixis. Which condition is this?",
+        "category": "Med-Surg",
+        "type": "multiple-choice",
+        "difficulty": "hard",
+        "answers": [
+            {"text": "Hepatic encephalopathy", "correct": true},
+            {"text": "Portal hypertension", "correct": false},
+            {"text": "Esophageal varices", "correct": false},
+            {"text": "Ascites", "correct": false}
+        ],
+        "explanation": "Asterixis (liver flap) and confusion indicate hepatic encephalopathy."
+    },
+    {
+        "id": 52,
+        "question": "The normal platelet count is ______/mm³.",
+        "category": "Fundamentals",
+        "type": "fill-blank",
+        "difficulty": "easy",
+        "answers": [
+            {"text": "150,000-400,000", "correct": true}
+        ],
+        "explanation": "Normal platelets: 150,000–400,000/mm³."
     }
 
 ];
