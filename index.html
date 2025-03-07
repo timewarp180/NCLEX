@@ -24,7 +24,26 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">               
+                <ul class="navbar-nav me-auto">      
+                       <!-- Add this dropdown section -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" 
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Links
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://nurses.archerreview.com/" 
+                               target="_blank">Archer Review</a></li>
+                        <li><a class="dropdown-item" href="https://www.ncsbn.org/nclex.htm" 
+                               target="_blank">NCLEX Resources</a></li>
+                        <li><a class="dropdown-item" href="https://nurse.org/articles/nclex-study-guide/" 
+                               target="_blank">Study Guides</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#about-us-modal" 
+                               data-bs-toggle="modal">About Us</a></li>
+                    </ul>
+                </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="new-quiz-btn">New Quiz</a>
                     </li>
@@ -234,6 +253,32 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" id="confirmSubmitButton">Submit Quiz</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Us Modal -->
+<!-- About Us Modal -->
+<div class="modal fade" id="about-us-modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">About Us</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Add image here -->
+                <img src="images/about.jpg" 
+                     alt="About Us Image"
+                     class="img-fluid rounded mb-3">
+                
+                <p>NCLEX Practice Application</p>
+                <p>Version: 1.0</p>
+                <p>Contact: support@nclexpractice.com</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
